@@ -6,9 +6,9 @@
 #X obj 264 557 spigot~;
 #X obj 162 319 inlet;
 #X obj 148 136 hsl 128 15 0 20 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 2000 1;
 #X obj 148 154 hsl 128 15 0 0.5 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 10300 1;
 #X obj 293 116 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 197 348 5 0 0 0 - - -;
@@ -38,7 +38,7 @@
 #X obj 313 300 r lforate;
 #X obj 421 515 snapshot~;
 #X obj 421 589 outlet;
-#X obj 339 487 metro 0.002;
+#X obj 327 524 metro 0.005;
 #X connect 0 0 27 1;
 #X connect 1 0 10 0;
 #X connect 1 0 6 0;
