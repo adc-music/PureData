@@ -5,3 +5,4 @@ Content:
 - Effects
 - Generators
 - Tools
+- Toolboxes
