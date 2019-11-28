@@ -17,26 +17,26 @@
 #X floatatom 620 304 5 0 0 0 - - -;
 #X floatatom 539 308 5 0 0 0 - - -;
 #X floatatom 723 305 5 0 0 0 - - -;
-#X obj 321 110 hsl 128 15 0 20000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 503 1;
-#X obj 321 127 hsl 128 15 0 20000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 1000 1;
-#X obj 321 145 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2500 1;
-#X obj 321 162 hsl 128 15 0 20000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 3700 1;
-#X text 307 108 A;
-#X text 308 126 D;
-#X text 307 144 S;
-#X text 307 160 R;
-#X floatatom 453 110 6 0 0 0 - - -;
-#X floatatom 453 127 6 0 0 0 - - -;
-#X floatatom 453 144 6 0 0 0 - - -;
-#X floatatom 453 161 6 0 0 0 - - -;
-#X obj 510 125 s A;
-#X obj 539 143 s D;
-#X obj 512 159 s S;
-#X obj 539 176 s R;
+#X obj 327 115 hsl 128 15 0 20000 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj 327 132 hsl 128 15 0 20000 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj 327 150 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 327 167 hsl 128 15 0 20000 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X text 313 113 A;
+#X text 314 131 D;
+#X text 313 149 S;
+#X text 313 165 R;
+#X floatatom 459 115 6 0 0 0 - - -;
+#X floatatom 459 132 6 0 0 0 - - -;
+#X floatatom 459 149 6 0 0 0 - - -;
+#X floatatom 459 166 6 0 0 0 - - -;
+#X obj 516 130 s A;
+#X obj 550 147 s D;
+#X obj 518 164 s S;
+#X obj 545 181 s R;
 #X obj 465 285 r A;
 #X obj 509 288 r D;
 #X obj 592 285 r S;
@@ -63,6 +63,11 @@
 #X obj 618 340 t b;
 #X obj 521 340 t b;
 #X obj 700 365 t b;
+#X obj 368 28 loadbang;
+#X msg 323 70 500;
+#X msg 362 69 500;
+#X msg 399 69 0.5;
+#X msg 442 69 500;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 38 0;
@@ -123,4 +128,12 @@
 #X connect 56 0 49 0;
 #X connect 57 0 53 0;
 #X connect 58 0 54 0;
+#X connect 59 0 60 0;
+#X connect 59 0 61 0;
+#X connect 59 0 62 0;
+#X connect 59 0 63 0;
+#X connect 60 0 17 0;
+#X connect 61 0 18 0;
+#X connect 62 0 19 0;
+#X connect 63 0 20 0;
 #X coords 0 -1 1 1 200 85 1 300 100;
