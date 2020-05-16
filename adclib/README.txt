@@ -1,4 +1,4 @@
-adclib is made by Alessandro De Cecco 2019
+adclib is made by Alessandro De Cecco (2019- )
 
 Content:
 - Core

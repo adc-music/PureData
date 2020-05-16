@@ -1,4 +1,4 @@
-#N canvas 6 9 596 651 10;
+#N canvas -14 0 596 651 10;
 #X floatatom 535 340 5 0 0 0 - - -;
 #X obj 368 294 inlet;
 #X obj 264 604 outlet~;
