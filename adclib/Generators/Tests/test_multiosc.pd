@@ -1,0 +1,2 @@
+#N canvas 30 54 450 300 10;
+#X obj 23 30 adc_multiosc~;
