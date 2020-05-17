@@ -1,4 +1,4 @@
-#N canvas 375 42 966 651 10;
+#N canvas 358 1 966 651 10;
 #X floatatom 557 415 5 0 0 0 - - -;
 #X obj 390 369 inlet;
 #X obj 286 679 outlet~;
@@ -7,7 +7,7 @@
 #X obj 278 370 inlet;
 #X obj 163 147 hsl 128 15 0 200 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X obj 163 165 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+#X obj 163 165 hsl 128 15 0 0.99 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 112 145 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -45,7 +45,6 @@
 #X obj 42 124 loadbang;
 #X msg 43 145 0;
 #X obj 49 643 spigot~;
-#X text 105 184;
 #X connect 0 0 22 1;
 #X connect 1 0 10 0;
 #X connect 1 0 6 0;
