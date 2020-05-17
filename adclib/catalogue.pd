@@ -1,15 +1,15 @@
-#N canvas -9 -9 1366 682 12;
+#N canvas 0 0 1366 682 12;
 #X obj 15 41 !-;
 #X obj 59 43 adc_dbtorms;
 #X obj 157 41 adc_randomize;
 #X obj 279 38 adc_randswitch;
-#X obj 14 86 not;
-#X obj 60 88 adc_rmstodb;
+#X obj 14 80 not;
+#X obj 59 79 adc_rmstodb;
 #X text 10 13 --- Core ---;
 #X text 6 170 --- Generators ---;
 #X obj 6 150 cnv 15 750 10 empty empty empty 20 12 0 14 -233017 -66577
 0;
-#X text 15 200;
+#X text 15 200 comment;
 #X obj 7 195 adc_adsr~;
 #X obj 217 195 adc_lfo~;
 #X obj 449 195 adc_multiosc~;
@@ -30,3 +30,4 @@
 #X obj 802 43 adc_simpledelay~;
 #X obj 1059 42 adc_slapback~;
 #X obj 801 144 adc_pingpong~;
+#X obj 14 118 tanh;

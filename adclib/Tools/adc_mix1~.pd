@@ -31,7 +31,7 @@
 #X obj 269 219 metro 150;
 #X obj 418 152 pack 0 50;
 #X obj 417 183 line~;
-#X obj 458 371 outlet~;
+#X obj 505 380 outlet~;
 #X obj 107 224 hsl 48 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 2350 1;
 #X floatatom 130 202 4 0 0 0 - - -;
@@ -40,11 +40,11 @@
 #X text 104 239 L;
 #X text 295 396 L;
 #X text 138 239 R;
-#X obj 436 337 *~;
-#X floatatom 474 319 5 0 0 0 - - -;
-#X text 478 390 R;
-#X obj 359 326 !-;
-#X floatatom 363 353 5 0 0 0 - - -;
+#X obj 483 346 *~;
+#X floatatom 521 328 5 0 0 0 - - -;
+#X text 525 399 R;
+#X obj 419 318 !-;
+#X floatatom 423 345 5 0 0 0 - - -;
 #X obj 291 350 *~;
 #X msg 19 126 -6;
 #X msg 18 237 0.5;
@@ -56,8 +56,10 @@
 #X obj 635 18 inlet;
 #X text 427 24 Level;
 #X text 637 -2 Solo;
-#X obj 366 389 outlet;
-#X text 368 407 Solo;
+#X obj 426 381 outlet;
+#X obj 351 381 outlet;
+#X text 430 398 Solo;
+#X text 359 398 Mute;
 #X connect 0 0 6 0;
 #X connect 2 0 11 0;
 #X connect 5 0 36 0;
@@ -68,6 +70,7 @@
 #X connect 8 0 26 0;
 #X connect 9 0 20 0;
 #X connect 11 0 12 0;
+#X connect 11 0 52 0;
 #X connect 12 0 5 1;
 #X connect 12 0 13 0;
 #X connect 14 0 11 0;
