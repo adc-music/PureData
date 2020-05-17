@@ -1,0 +1,17 @@
+#N canvas 72 99 1096 460 12;
+#X obj 78 425 dac~;
+#X obj 52 157 adc_mix1~;
+#X obj 159 156 adc_mix1~;
+#X obj 81 48 pwm~ 0.3;
+#X msg 67 11 0.1;
+#X obj 308 70 adc_simpledelay~;
+#X obj 306 202 adc_simpledelay~;
+#X connect 1 0 0 0;
+#X connect 1 1 0 1;
+#X connect 2 0 0 0;
+#X connect 2 1 0 1;
+#X connect 3 0 5 0;
+#X connect 3 0 6 0;
+#X connect 4 0 3 0;
+#X connect 5 0 2 0;
+#X connect 6 0 1 0;
