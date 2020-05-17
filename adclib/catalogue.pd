@@ -1,0 +1,10 @@
+#N canvas 385 21 870 590 12;
+#X obj 63 44 !-;
+#X obj 107 46 adc_dbtorms;
+#X obj 205 44 adc_randomize;
+#X obj 205 93 adc_randswitch;
+#X obj 62 89 not;
+#X obj 108 91 adc_rmstodb;
+#X text 59 10 --- Core ---;
+#X text 56 204 ---------------------------------;
+#X text 61 233 --- Generators ---;
