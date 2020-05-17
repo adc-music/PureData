@@ -1,0 +1,9 @@
+#N canvas 526 163 450 300 10;
+#X obj 184 57 inlet;
+#X obj 184 91 + 100;
+#X text 116 20 Real dB to rms converter;
+#X obj 184 142 dbtorms;
+#X obj 184 195 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 4 0;
