@@ -1,14 +1,14 @@
-#N canvas 66 0 924 664 10;
+#N canvas 318 29 924 664 10;
 #X floatatom 557 415 5 0 0 0 - - -;
 #X obj 390 369 inlet;
 #X obj 286 679 outlet~;
-#X obj 560 372 inlet;
+#X obj 598 377 inlet;
 #X obj 286 645 spigot~;
 #X obj 278 370 inlet;
 #X obj 163 147 hsl 128 15 0.01 200 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 2900 1;
+-262144 -1 -1 317 1;
 #X obj 163 165 hsl 128 15 0 0.99 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7800 1;
+-1 -1 11545 1;
 #X obj 112 145 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 262 407 5 0 0 0 - - -;
@@ -22,12 +22,12 @@
 #X text 108 163 Feedback;
 #X text 131 145 Time;
 #X text 370 344 Delay time;
-#X text 555 352 Feedback;
+#X text 593 357 Feedback;
 #X obj 423 539 *~;
 #X obj 386 465 delread~ Line 1200;
 #X obj 379 581 delwrite~ Line 1200;
 #X obj 163 119 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4800 1;
+-1 -1 12700 1;
 #X floatatom 297 118 6 0 0 0 - - -;
 #X text 111 116 Dry/Wet;
 #X obj 132 364 inlet;
@@ -42,6 +42,25 @@
 #X obj 49 643 spigot~;
 #X obj 101 517 !-;
 #X obj 219 445 not;
+#X obj 342 102 vradio 14 1 1 6 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 471 195 sel 0 1 2 3 4 5;
+#X floatatom 369 207 5 0 0 0 - - -;
+#X msg 470 269 5 0.9;
+#X obj 528 306 unpack f f;
+#X floatatom 494 331 5 0 0 0 - - -;
+#X floatatom 605 335 5 0 0 0 - - -;
+#X msg 518 269 30 0.4;
+#X text 360 100 Comb filter;
+#X text 359 129 Short Echo;
+#X text 359 157 Short Reverb;
+#X text 360 114 Loudness Boost;
+#X msg 569 269 50 0.7;
+#X msg 624 270 100 0.85;
+#X text 360 143 Large Echo;
+#X text 360 170 Large Reverb;
+#X msg 690 270 100 0.3;
+#X msg 748 269 150 0.58;
 #X connect 0 0 21 1;
 #X connect 1 0 10 0;
 #X connect 3 0 0 0;
@@ -79,4 +98,24 @@
 #X connect 36 0 2 0;
 #X connect 37 0 31 1;
 #X connect 38 0 36 1;
-#X coords 0 -1 1 1 240 85 1 100 100;
+#X connect 39 0 41 0;
+#X connect 39 0 40 0;
+#X connect 40 0 42 0;
+#X connect 40 1 46 0;
+#X connect 40 2 51 0;
+#X connect 40 3 52 0;
+#X connect 40 4 55 0;
+#X connect 40 5 56 0;
+#X connect 42 0 43 0;
+#X connect 43 0 44 0;
+#X connect 43 0 10 0;
+#X connect 43 1 45 0;
+#X connect 43 1 0 0;
+#X connect 44 0 6 0;
+#X connect 45 0 7 0;
+#X connect 46 0 43 0;
+#X connect 51 0 43 0;
+#X connect 52 0 43 0;
+#X connect 55 0 43 0;
+#X connect 56 0 43 0;
+#X coords 0 -1 1 1 350 90 1 100 100;
