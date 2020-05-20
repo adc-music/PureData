@@ -1,0 +1,10 @@
+#N canvas 79 125 450 300 10;
+#X obj 154 120 adc_s&h~;
+#X obj 175 196 adc_watch~;
+#X floatatom 173 233 5 0 0 0 - - -;
+#X obj 206 62 pwm~ 0.5;
+#X obj 115 65 osc~ 440;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 0 1;
+#X connect 4 0 0 0;
