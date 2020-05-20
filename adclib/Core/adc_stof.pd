@@ -1,0 +1,7 @@
+#N canvas 0 0 450 300 10;
+#X obj 69 48 inlet;
+#X obj 69 155 outlet;
+#X text 59 12 Semitones to Frequency Ratio;
+#X obj 69 99 expr pow(2 \, $f1/12);
+#X connect 0 0 3 0;
+#X connect 3 0 1 0;

@@ -1,0 +1,7 @@
+#N canvas 181 75 450 300 10;
+#X obj 98 59 inlet;
+#X obj 98 144 outlet;
+#X text 99 12 Frequency ratio to semitones;
+#X obj 98 95 expr 12*log($f1) / log(2);
+#X connect 0 0 3 0;
+#X connect 3 0 1 0;
