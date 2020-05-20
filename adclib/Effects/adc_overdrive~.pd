@@ -10,7 +10,7 @@
 #X text -13 317 Input signal;
 #X text 343 351 Bypass;
 #X obj 175 115 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9800 1;
+-1 -1 12700 1;
 #X floatatom 309 114 6 0 0 0 - - -;
 #X text 124 112 Dry/Wet;
 #X obj 199 366 inlet;
@@ -23,10 +23,8 @@
 #X obj 42 124 loadbang;
 #X msg 43 145 0;
 #X obj 49 643 spigot~;
-#X obj 168 519 !-;
-#X obj 286 447 not;
-#X obj 175 143 hsl 128 15 0 6 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7900 1;
+#X obj 175 143 hsl 128 15 -6 6 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 10100 1;
 #X floatatom 309 142 6 0 0 0 - - -;
 #X text 137 141 Drive;
 #X obj 424 371 inlet;
@@ -36,7 +34,7 @@
 #X obj 394 512 *~;
 #X floatatom 419 464 5 0 0 0 - - -;
 #X obj 523 649 snapshot~;
-#X obj 562 579 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 562 579 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 567 676 7 0 0 0 - - -;
 #X obj 522 624 metro 101;
@@ -47,13 +45,17 @@
 >= $f2 && $v1 <= 2*$f2 \, 1 - (2 - 3*$v1)*(2 - 3*$v1) / 3 \, 1)) \,
 if($v1 > -1*$f2 \, 2*$v1 \, if($v1 <= -1*$f2 && $v1 >= -2*$f2 \, -(1
 - (2 - 3*abs($v1))*(2 - 3*abs($v1)) / 3) \, -1)));
+#X obj 380 103 loadbang;
+#X msg 381 130 0;
+#X obj 168 519 adc_!-;
+#X obj 286 447 adc_not;
 #X connect 1 0 0 0;
-#X connect 1 0 33 0;
+#X connect 1 0 31 0;
 #X connect 2 0 4 0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X connect 4 0 1 1;
-#X connect 4 0 23 0;
+#X connect 4 0 42 0;
 #X connect 6 0 21 0;
 #X connect 6 0 16 0;
 #X connect 6 0 15 0;
@@ -62,29 +64,31 @@ if($v1 > -1*$f2 \, 2*$v1 \, if($v1 <= -1*$f2 && $v1 >= -2*$f2 \, -(1
 #X connect 10 0 14 0;
 #X connect 12 0 14 0;
 #X connect 14 0 15 1;
-#X connect 14 0 22 0;
-#X connect 15 0 31 0;
+#X connect 14 0 41 0;
+#X connect 15 0 29 0;
 #X connect 16 0 1 0;
 #X connect 17 0 9 0;
 #X connect 18 0 17 0;
 #X connect 19 0 20 0;
 #X connect 20 0 3 0;
 #X connect 21 0 0 0;
-#X connect 22 0 16 1;
-#X connect 23 0 21 1;
-#X connect 24 0 25 0;
-#X connect 25 0 24 0;
-#X connect 25 0 29 0;
-#X connect 27 0 29 0;
-#X connect 29 0 30 0;
-#X connect 30 0 32 0;
-#X connect 30 0 31 1;
-#X connect 31 0 40 0;
-#X connect 33 0 35 0;
-#X connect 34 0 36 0;
-#X connect 36 0 33 0;
-#X connect 37 0 38 0;
-#X connect 38 0 40 1;
-#X connect 39 0 37 0;
-#X connect 40 0 1 0;
-#X coords 0 -1 1 1 255 100 1 100 100;
+#X connect 22 0 23 0;
+#X connect 23 0 22 0;
+#X connect 23 0 27 0;
+#X connect 25 0 27 0;
+#X connect 27 0 28 0;
+#X connect 28 0 30 0;
+#X connect 28 0 29 1;
+#X connect 29 0 38 0;
+#X connect 31 0 33 0;
+#X connect 32 0 34 0;
+#X connect 34 0 31 0;
+#X connect 35 0 36 0;
+#X connect 36 0 38 1;
+#X connect 37 0 35 0;
+#X connect 38 0 1 0;
+#X connect 39 0 40 0;
+#X connect 40 0 22 0;
+#X connect 41 0 16 1;
+#X connect 42 0 21 1;
+#X coords 0 -1 1 1 255 80 1 100 100;
