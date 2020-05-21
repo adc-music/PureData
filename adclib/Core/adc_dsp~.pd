@@ -1,0 +1,16 @@
+#N canvas 0 0 450 300 10;
+#X obj 103 103 cnv 15 60 125 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 49 163 dsp;
+#X obj 111 122 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 127 201 5 0 0 0 - - -;
+#X floatatom 126 169 5 0 0 0 - - -;
+#X text 101 101 DSP ON/OFF;
+#X text 128 153 peak;
+#X text 129 185 mean;
+#X text 103 145 CPU;
+#X connect 1 0 3 0;
+#X connect 1 1 4 0;
+#X connect 2 0 1 0;
+#X coords 0 -1 1 1 65 130 1 100 100;
