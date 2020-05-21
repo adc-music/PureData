@@ -1,0 +1,18 @@
+#N canvas 50 72 450 300 10;
+#X obj 87 63 inlet~;
+#X obj 159 63 inlet~;
+#X obj 124 134 allpass~;
+#X text 159 42 Delay Time;
+#X obj 248 63 inlet~;
+#X text 248 42 Gain;
+#X text 67 42 Input signal;
+#X obj 124 206 outlet~;
+#X obj 124 157 allpass~;
+#X text 107 2 2nd order allpass filter;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 1 0 8 1;
+#X connect 2 0 8 0;
+#X connect 4 0 2 2;
+#X connect 4 0 8 2;
+#X connect 8 0 7 0;
