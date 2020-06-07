@@ -1,0 +1,8 @@
+#N canvas 248 41 995 628 10;
+#X obj 50 3 adc_dsp~;
+#X obj 72 229 adc_mix1~;
+#X obj 90 476 dac~;
+#X obj 198 50 adc_randklangfarbe~;
+#X connect 1 0 2 0;
+#X connect 1 4 2 1;
+#X connect 3 0 1 0;
