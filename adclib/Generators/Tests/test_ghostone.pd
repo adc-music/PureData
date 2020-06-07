@@ -1,0 +1,18 @@
+#N canvas 22 129 509 404 10;
+#X msg 126 42 50;
+#X msg 162 44 60;
+#X msg 210 43 70;
+#X obj 136 240 *~;
+#X obj 208 161 vsl 15 64 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 300 1;
+#X obj 137 301 dac~;
+#X obj 135 125 adc_ghostone~;
+#X msg 73 41 40;
+#X connect 0 0 6 0;
+#X connect 1 0 6 0;
+#X connect 2 0 6 0;
+#X connect 3 0 5 0;
+#X connect 3 0 5 1;
+#X connect 4 0 3 1;
+#X connect 6 0 3 0;
+#X connect 7 0 6 0;
