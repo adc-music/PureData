@@ -1,0 +1,15 @@
+#N canvas 3 88 1092 446 10;
+#X obj 213 321 dac~;
+#X obj 217 263 *~ 0.1;
+#X obj 297 262 *~ 0.1;
+#X obj 38 56 osc~ 440;
+#X obj 583 12 osc~ 0.5;
+#X obj 177 32 adc_ringmod~;
+#X obj 651 34 adc_ringmod~;
+#X obj 653 222 adc_ringmod~;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 5 0;
+#X connect 4 0 5 2;
+#X connect 5 0 1 0;
+#X connect 5 1 2 0;
