@@ -1,0 +1,6 @@
+#N canvas -9 -9 1366 682 10;
+#X obj 263 270 adc_oscilloscope~;
+#X obj 178 38 osc~ 220;
+#X obj 174 82 adc_waveshaper~;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
