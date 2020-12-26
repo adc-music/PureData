@@ -1,0 +1,34 @@
+#N canvas 216 17 1370 682 10;
+#X obj 103 219 loadbang;
+#X obj 235 123 tgl 15 0 \$0-modules-s \$0-modules-r MODULES 20 7 0
+10 -262144 -1 -1 1 1;
+#X obj 595 146 sel 0 1;
+#X obj 108 122 tgl 15 0 \$0-dsp_onoff-s \$0-dsp_onoff-r DSP 22 7 0
+10 -262144 -1 -1 1 1;
+#X msg 122 249 1;
+#X obj 410 102 r \$0-dsp_onoff-s;
+#X msg 410 145 \; pd dsp \$1;
+#X obj 595 108 r \$0-modules-s;
+#X msg 124 293 0;
+#X obj 170 310 s \$0-modules-r;
+#X obj 168 266 s \$0-dsp_onoff-r;
+#X obj 160 111 cnv 5 5 5 empty empty ADC_LIB 0 0 0 14 -262144 -66577
+0;
+#X obj 370 144 dsp;
+#X floatatom 128 146 5 0 0 1 __PEAK(%) #0-peak_cpu-r -;
+#X obj 385 200 s \$0-peak_cpu-r;
+#X obj 370 223 s \$0-mean_cpu-r;
+#X floatatom 128 165 5 0 0 1 __MEAN(%) #0-mean_cpu-r -;
+#X text 103 153 CPU;
+#X msg 614 179 \; pd-adc_main.pd obj 0 80 adc_modules;
+#X connect 0 0 4 0;
+#X connect 0 0 8 0;
+#X connect 2 1 18 0;
+#X connect 4 0 10 0;
+#X connect 5 0 6 0;
+#X connect 5 0 12 0;
+#X connect 7 0 2 0;
+#X connect 8 0 9 0;
+#X connect 12 0 15 0;
+#X connect 12 1 14 0;
+#X coords 0 -1 1 1 200 85 2 100 100;

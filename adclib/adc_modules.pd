@@ -1,0 +1,12 @@
+#N canvas 0 0 1366 682 10;
+#X obj 109 126 bng 15 250 50 0 autopan empty AUTOPAN 17 7 0 10 -262144
+-1 -1;
+#X obj 650 16 r autopan;
+#X obj 109 153 bng 15 250 50 0 phaseinvert empty PHASE_INVERT 17 7
+0 10 -262144 -1 -1;
+#X obj 652 94 r phaseinvert;
+#X msg 652 130 \; pd-adc_main.pd obj 100 200 adc_phaseinvert~;
+#X msg 650 52 \; pd-adc_main.pd obj 200 100 adc_autopan~;
+#X connect 1 0 5 0;
+#X connect 3 0 4 0;
+#X coords 0 -1 1 1 200 500 2 100 100;

@@ -1,0 +1,2 @@
+#N canvas 0 0 1366 682 10;
+#X obj -1 -51 adc_browser;
