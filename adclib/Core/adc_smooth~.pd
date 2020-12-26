@@ -1,0 +1,16 @@
+#N canvas 125 200 450 300 10;
+#X text 126 35 Target;
+#X text 282 33 Smooth Time;
+#X obj 267 61 inlet SMOOTH_TIME;
+#X msg 228 124 \$1;
+#X obj 159 151 pack 0 50;
+#X obj 125 61 inlet~ TARGET;
+#X obj 159 183 line~;
+#X obj 159 235 outlet~;
+#X obj 155 101 unsig~ 50;
+#X connect 2 0 3 0;
+#X connect 3 0 4 1;
+#X connect 4 0 6 0;
+#X connect 5 0 8 0;
+#X connect 6 0 7 0;
+#X connect 8 0 4 0;
